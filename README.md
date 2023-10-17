@@ -7,5 +7,5 @@
 3. Default matchers provided by jest [using matchers](https://jestjs.io/docs/using-matchers)
 4. Testing asynchronous code - `async/await`
 
-## More about setting up jest with TypeScript
+## More about setting up Jest with TypeScript
 [Using TypeScript](https://jestjs.io/docs/getting-started#using-typescript)

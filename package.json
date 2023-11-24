@@ -5,10 +5,18 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "tsc -p tsconfig.build.json"
+    "build": "tsc -p tsconfig.build.json",
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-extended/all"
+    ]
   },
   "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
     "@types/jest": "27.4.0",
+    "babel-jest": "^29.7.0",
     "jest": "27.4.0",
     "jest-extended": "^2.0.0",
     "ts-jest": "^27.1.4",

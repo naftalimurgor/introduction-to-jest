@@ -1,5 +1,7 @@
+// @ts-ignore
 import * as matchers from 'jest-extended'
 expect.extend(matchers)
+
 import square from './index'
 
 test('square of 5 is 25', () => {

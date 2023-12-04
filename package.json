@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.build.json"
   },
   "jest": {
     "setupFilesAfterEnv": [

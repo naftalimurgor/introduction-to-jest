@@ -3,17 +3,22 @@
 
 ## Getting started
 1. Clone repo:
+
 ```sh
 git clone https://naftalimurgor.com/unit-testing-with-jest
 ```
+
 2. Install dependencies:
+
 ```sh
 npm install
 ```
+
 3. Run the test:
 ```sh
 npm test
 ```
+
 4. Add more tests and tinker around with various custom matchers:
 ```javascript
 /* Custom matchers provided by jest-extended */
@@ -96,11 +101,50 @@ npm test
 // .toIncludeMultiple([substring])
 // .toEqualIgnoringWhitespace(string)
 ```
-## Covers
+
+## The blog articcle covers
 1. Generating `jest.config.ts` file, handles project wide `jest` custom configuration
 2. Using custom matchers provided by [jest-extended](https://github.com/jest-community/jest-extended#readme)
 3. Default matchers provided by jest [using matchers](https://jestjs.io/docs/using-matchers)
 4. Testing asynchronous code - `async/await`
 
-## More about setting up Jest with TypeScript
+## How TypeScript is set up
+
 [Using TypeScript](https://jestjs.io/docs/getting-started#using-typescript)
+
+```typescript
+const config: Config.InitialOptions = {
+  // ts-jest
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  verbose: true,
+  automock: false,
+  clearMocks: true,
+  collectCoverage: true,
+  // https://github.com/jest-community/jest-extended: Extended matchers
+  setupFilesAfterEnv: ['jest-extended/all'],
+}
+```
+
+## Clear Jest cache
+
+```sh
+{
+    ...
+    "scripts:" {
+        "clear_jest": "jest --clearCache"
+    }
+    ...
+}
+
+## or simply run:
+jest --clearCache
+```
+
+## How to set up TypeScript with `jest-extended`
+
+Add a global.d.ts file in the project root, and add the following import:
+
+```typescript
+import 'jest-extended'
+```

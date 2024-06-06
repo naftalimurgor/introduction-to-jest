@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { Users } from './Users'
-import { Http } from './common/Http'
+import { Users } from '../Users'
+import { Http } from '../common/Http'
 jest.mock('axios')
 jest.mock('./common/Http')
 
@@ -18,8 +18,8 @@ describe('User Class test', () => {
   })
 
   it('should get receive an error', async () => {
-    // @ts-ignore
-    instance.all = jest.fn().mockImplementationOnce(() =>{
+
+    instance.all = jest.fn().mockImplementationOnce(() => {
       return new Error('something weird happened')
     })
 

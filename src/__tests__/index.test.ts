@@ -2,7 +2,7 @@
 import * as matchers from 'jest-extended'
 expect.extend(matchers)
 
-import square from './index'
+import square from '../index'
 
 test('square of 5 is 25', () => {
   expect(square(5)).toBe(25)

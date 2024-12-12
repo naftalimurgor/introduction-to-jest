@@ -102,7 +102,7 @@ npm test
 // .toEqualIgnoringWhitespace(string)
 ```
 
-## The blog articcle covers
+## The blog article covers
 1. Generating `jest.config.ts` file, handles project wide `jest` custom configuration
 2. Using custom matchers provided by [jest-extended](https://github.com/jest-community/jest-extended#readme)
 3. Default matchers provided by jest [using matchers](https://jestjs.io/docs/using-matchers)
